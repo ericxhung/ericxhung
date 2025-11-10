@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Login</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"></script>
+    <title>登入頁面</title>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"></script>
 </head>
 <body onload="brython()">
-    <h3>登入系統</h3>
+    <h3>登入</h3>
     <input id="user" type="text" placeholder="使用者名稱"><br>
     <input id="password" type="password" placeholder="密碼"><br>
     <button id="ok">送出</button>
@@ -20,9 +20,8 @@
             password = document["password"].value
 
             if user == "erichung1102" and password == "cj/6vm4tp6":
-                document["output"].text = "登入成功 ✅ 正在導向..."
-                # 導向到另一個頁面
-                window.location.href = "in.html"  # 這裡換成你自己的網址
+                window.localStorage["logged_in"] = "true"
+                window.location.href = "in.html"
             else:
                 document["output"].text = "登入失敗 ❌"
 

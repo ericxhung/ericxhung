@@ -7,13 +7,16 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"></script>
 </head>
 <body onload="brython()">
+    <input id="user" type="text">
+    <input id="password" type="password">
+    <button id="ok">送出</button>
+    <p id="output"></p>
     <script type="text/python">
-        from browser import document, alert
-        log=input("輸入帳號:")
-        pas=input("輸入密碼:")
-        if log=="erichung1102" and pas="cj/6vm4tp6":
-            print("登入成功")
-        else:
-            print("帳號或密碼錯誤")
+        from browser import document, html
+        def login:
+            user=document["user"].value
+            password=document["password"].value
+            if user=="erichung1102" and password=="cj/6vm4tp6"
+        document["ok"].bind("click", login)
 </body>
 </html>

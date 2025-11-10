@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Brython 範例</title>
-    <!-- 載入 Brython -->
+    <title>Login</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"></script>
 </head>
 <body onload="brython()">
@@ -16,7 +14,10 @@
         def login:
             user=document["user"].value
             password=document["password"].value
-            if user=="erichung1102" and password=="cj/6vm4tp6"
+            if user=="erichung1102" and password=="cj/6vm4tp6":
+                document["output"].text = "登入成功"
+            else:
+                document.["output"}.text = "登入失敗"
         document["ok"].bind("click", login)
 </body>
 </html>

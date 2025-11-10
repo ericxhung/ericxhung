@@ -7,20 +7,12 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"></script>
 </head>
 <body onload="brython()">
-    <h2>這是一個 Brython 範例</h2>
-    <button id="btn">點我</button>
-    <p id="output"></p>
-
-    <!-- 寫在這裡的 <script type="text/python"> 會被 Brython 執行 -->
     <script type="text/python">
-        from browser import document, alert
-
-        def when_click(event):
-            document["output"].text = "你點了按鈕！"
-            alert("Python 在瀏覽器裡執行成功 🎉")
-
-        # 綁定事件
-        document["btn"].bind("click", when_click)
-    </script>
+        log=input("輸入帳號:")
+        pas=input("輸入密碼:")
+        if log=="erichung1102" and pas="cj/6vm4tp6":
+            print("登入成功")
+        else:
+            print("帳號或密碼錯誤")
 </body>
 </html>
